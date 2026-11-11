@@ -3,7 +3,7 @@
 A responsive portfolio built with React 19, TypeScript, Vite, Tailwind CSS v4, Framer Motion and Lucide React.
 
 ## Requirements
-- Node.js 20.19+ or 22.12+
+- Node.js 20.19+ or 22.12+ (Vite 7 requirement)
 - npm
 
 ## Run locally
@@ -11,6 +11,7 @@ A responsive portfolio built with React 19, TypeScript, Vite, Tailwind CSS v4, F
 npm install
 npm run dev
 ```
+Open the local URL printed by Vite (usually http://localhost:5173).
 
 ## Production build
 ```bash
@@ -24,16 +25,12 @@ Edit `src/data.ts`:
 - `linkedin`
 - `github`
 
-Review the experience, project descriptions, certification name and impact metrics for accuracy before publishing.
+Review the Accenture role, project descriptions, certification name and impact metrics for accuracy. The impact figures are displayed as reported outcomes from project work. Update the copy if any figure or description should not be public.
 
-## GitHub Pages CI/CD
-This repository is configured to deploy to:
-
-https://bhubesh757.github.io/bhubesh_portfolio/
-
-The GitHub Actions workflow at `.github/workflows/deploy.yml` runs on every push to `main` and can also be started manually. It installs dependencies, runs ESLint, builds the Vite app and deploys the `dist` directory to GitHub Pages.
-
-In the repository, open **Settings → Pages → Build and deployment** and select **GitHub Actions** as the source. Then check the **Actions** tab for the build and deployment status.
+## Deploy
+- **Vercel:** import the GitHub repository. Framework preset: Vite. Build command: `npm run build`; output directory: `dist`.
+- **Netlify:** build command `npm run build`; publish directory `dist`.
+- **GitHub Pages:** configure the Vite `base` option if deploying to a repository subpath.
 
 ## Project structure
 - `src/App.tsx` — page layout and interactive navigation
